@@ -3,15 +3,18 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LandingPage from "./screens/LandingPage/LandingPage";
 import "./bootstrap.min.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import MyNotes from "./screens/MyNotes/MyNotes";
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-      <div className="App">Hello World</div>
-      <LandingPage />
-      <main style={{ minHeight: "93vh" }}></main>
+      <main>
+        <Route path="/" component={LandingPage} />
+        <Route path="/mynotes" component={() => <MyNotes />} />
+      </main>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
