@@ -12,7 +12,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} exact></Route>
-          <Route path="/mynotes" element={<MyNotes />} exact></Route>
+          <Route path="/myNotes" element={<MyNotes />} exact></Route>
         </Routes>
       </main>
       <Footer />
